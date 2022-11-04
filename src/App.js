@@ -1,17 +1,20 @@
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import Body from './components/Body';
-import './App.css';
-import ItemListContainer from './components/ItemListContainer';
+import React from "react";
+
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Body from "./components/Body";
+import ItemListContainer from "./components/ItemListContainer";
+
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <Navbar/>,
-      <Body/>,
-      <ItemListContainer greeting={"hola mundo!!"} />,
-      <Footer/>,
-    </div>
+    <>
+      <Navbar />
+      <Body />
+      <ItemListContainer greeting={"hola mundo!!"} />
+      <Footer />
+    </>
   );
 }
 
