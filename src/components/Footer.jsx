@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
 
         <div className='footer__tres'>
-            <icon> </icon>
+
         </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-export default function body() {
+export default function Body() {
   return (
     <header>
      <img src=''></img>
