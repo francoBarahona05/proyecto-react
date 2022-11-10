@@ -30,10 +30,10 @@ export default function Navbar() {
                 <Link to='/'>productos</Link>
                 <ul className='nav__vertical'>
                   <li>
-                    <Link to='/category/deportes'>femenino</Link>
+                    <Link to='/category/femenino'>femenino</Link>
                   </li>
                   <li>
-                    <Link to='/category/coleccion'>masculino</Link>
+                    <Link to='/category/masculino'>masculino</Link>
                   </li>
                 </ul>
               </li>

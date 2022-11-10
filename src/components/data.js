@@ -1,8 +1,7 @@
 export  const data=[
     {
         name : "sport" ,
-        category : "coleccion",
-        surname:"barahona",
+        category : "femenino",
         id : 1 , 
         price: 10000,
         stock : 15,
@@ -10,8 +9,7 @@ export  const data=[
       },
       {
       name : "runing" , 
-      category: "coleccion",
-      surname :"lopez",
+      category: "femenino",
       id : 2 ,
       price : 2000,
       stock : 100,
@@ -20,8 +18,7 @@ export  const data=[
       },
       {
         name : "sport",
-        category: "deportes",
-        surname : "barahona lopez",
+        category: "masculino",
         id : 3 ,
         price: 10000,
         stock : 2,
@@ -30,8 +27,7 @@ export  const data=[
       },
       {
         name : "urban" ,
-        category : "deportes",
-        surname:"del 8" ,
+        category : "masculino",
         id : 4 , 
         price: 10000,
         stock : 1,
