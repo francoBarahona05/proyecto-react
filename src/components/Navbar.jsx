@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import imagenes from '../media/imagenes';
 import './Cart';
 import Example from './Cart';
-import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   return (

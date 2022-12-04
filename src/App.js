@@ -3,18 +3,18 @@ import Navbar from './components/Navbar';
 import Body from './components/Body';
 import './App.css';
 import ItemListContainer from './components/ItemListContainer';
-import { PageItem, ToastBody } from 'react-bootstrap';
-// import itemLista from './components/Item';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Checkout from './components/Checkout';
 import Contact from './components/Contact';
 import ItemDetailContainer from './components/ItemDetailContainer'
+import ContextContainer from './components/ContextContainer';
 
 
 
 function App() {
   return (
     <div>
+      <ContextContainer>
       <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -25,8 +25,9 @@ function App() {
         <Route path='/category/:idcategory/' element={<ItemListContainer/>} />
         <Route path='/item/:iditem/' element={<ItemDetailContainer/>} />
       </Routes>  
-      </BrowserRouter>
       <Footer/>
+      </BrowserRouter>
+      </ContextContainer>
     </div>
   );
 }

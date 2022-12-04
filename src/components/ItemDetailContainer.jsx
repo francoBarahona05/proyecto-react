@@ -1,32 +1,33 @@
-import React from 'react'
-import '../App.css';
-import { useState ,useEffect } from 'react';
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { data } from './data.js';
-import ItemList from './ItemList';
+import '../App.css';
+import ItemDetail from './ItemDetail';
 
-export default function ItemListContainer() {
-  const {iditem}= useParams()
-  const [producto, setProducto]=useState({})
-  console.log(setProducto)
+export default function ItemDetailContainer() {
+  const [product, setProduct] = useState({})
+  const {iditem} = useParams()   
+  
+  useEffect(() => {
+    const db = getFirestore();
+    const ref = doc(db , "products", iditem)
 
- useEffect(() => {
-  const productoPromise = new Promise((res , rej)=>{
-    setTimeout(() => {
-      res(data.find((item)=> item.id == iditem))
-    },0);
-   })
+    getDoc(ref).then((item)=>{
+      const x = {
+        ...item.data(),
+        id: item.id,
+      }
 
-   productoPromise.then((res)=>{ 
+      setProduct(x)
+ 
+    });
+  }, [iditem])
 
-    setProducto(res)
-  })
 
-}, [iditem])
 
   return (
     <div className='item__detail'>
-    <ItemList item={producto}/>
-    </div>
+    <ItemDetail item={product}/>
+    </div> 
   )
 }
